@@ -3,9 +3,11 @@
 //   Using quadratic Chabauty (in Sage) and the Mordell-Weil sieve (here).
 //   To replicate this analysis:
 //
+//   0. Be sure you have followed the installation instructions in the README 
+//      to obtain all the required files.
 //   1. Run Steps 1 and 2 in this file. It computes and prints
 //      pts / gens / projE1E2 / ordinary_pr, for use in Step 3.
-//   2. In Sage, copy the output of Step 2 into ratptscalc.sage to apply
+//   2. In Sage, copy the output of Step 2 into QuadraticChabautyAnalysis.sage to apply
 //      quadratic Chabauty. It prints "all_fake_coeffs := ...;" as the main output.
 //   3. Paste the printed all_fake_coeffs into the `all_fake_coeffs :=`
 //      position, then run steps 3 through 5 to execute the sieve. 
@@ -15,8 +17,8 @@
 // Step 1: Load relevant files and define the curve.
 //////////////////////////////////////////////////////////////////////////////
 
-load "NewFunctions.m"; // https://github.com/oana-adascalitei/MWSieveForDatabase
-load "MWSieveCode.m";  // https://github.com/steffenmueller/QCMod
+load "NewFunctions.m"; 
+load "MWSieveCode.m";  
 
 R<x> := PolynomialRing(Rationals());
 X := HyperellipticCurve(x^6 - 9*x^2 + 9);
@@ -51,7 +53,7 @@ print "projE1E2:"; print projE1E2;
 print "ordinary_pr:"; print ordinary_pr;
 
 //////////////////////////////////////////////////////////////////////////////
-// Step 3 (Sage, via ratptscalc.sage): quadratic Chabauty, then the MW
+// Step 3 (Sage, via QuadraticChabautyAnalysis.sage): quadratic Chabauty, then the MW
 // coefficients of the "fake" (non-rational) points, printed as
 // "all_fake_coeffs := ...;". Paste that output in below.
 //////////////////////////////////////////////////////////////////////////////

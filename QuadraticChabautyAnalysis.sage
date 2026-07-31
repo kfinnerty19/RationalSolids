@@ -1,4 +1,5 @@
 load("qc_g2_bielliptic.sage")
+
 # for the first three terms, populate inside the first pair of brackets with Magma output from Step 2 of MainCode.m
 # Note that for pts and projE1E2, points of the form  (x : y : z) must be changed to (x, y, z)
 
