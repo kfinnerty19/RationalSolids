@@ -1,5 +1,5 @@
 // ============================================================================
-//   Determination of rational points for X: y^2 = 9*x^6 - 36*x^4 + 64.
+//   Determination of rational points for X: y^2 = x^6 - 9*x^2 + 9.
 //   Using quadratic Chabauty (in Sage) and the Mordell-Weil sieve (here).
 //   To replicate this analysis:
 //
