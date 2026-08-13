@@ -47,10 +47,15 @@ GoodPrimes := [p : p in Primes | p in BadPrimes(X) eq false];
 OP := [p : p in GoodPrimes | IsOrdinary(ChangeRing(E1,GF(p))) and IsOrdinary(ChangeRing(E2,GF(p)))];
 ordinary_pr := [OP[i] : i in [1..3]];
 
-print "pts:"; print pts;
+print "pts:"; print pts; 
+// [ (1 : -1 : 0), (1 : 1 : 0), (-1 : -1 : 1), (-1 : 1 : 1), (0 : -3 : 1), (0 : 3 : 1),
+// (1 : -1 : 1), (1 : 1 : 1), (-3 : -3 : 2), (-3 : 3 : 2), (3 : -3 : 2), (3 : 3 : 2) ]
 print "gens:"; print gens;
+// [[1, x^3], [x + 1, x^3]]
 print "projE1E2:"; print projE1E2;
+// [[ (0 : 1 : 0), (9 : -9 : 1) ], [ (1 : -1 : 1), (0 : -9 : 1) ]]
 print "ordinary_pr:"; print ordinary_pr;
+//[ 5, 7, 11 ]
 
 //////////////////////////////////////////////////////////////////////////////
 // Step 3 (Sage, via QuadraticChabautyAnalysis.sage): quadratic Chabauty, then the MW
@@ -80,10 +85,16 @@ qc_M := &*[ordinary_pr[i]^exponents[i] : i in [1..#ordinary_pr]];
 
 MWSPrimes1 := sieving_primes(qc_M*1, A, groups, 0.5 : printlevel := 0);
 print "MWSPrimes1:"; print MWSPrimes1;
+//[ 29, 61, 113, 877, 1279, 1291, 2687, 2713, 3547, 3643, 4219 ]
 MWSPrimes2 := sieving_primes(qc_M*2, A, groups, 0.5 : printlevel := 0);
 print "MWSPrimes2:"; print MWSPrimes2;
+//[ 29, 61, 113, 271, 397, 593, 877, 1117, 1279, 1291, 1747, 2467, 2687, 2713,
+//3511, 3547, 3643, 4219, 4337, 5399, 7757 ]
 MWSPrimes4 := sieving_primes(qc_M*4, A, groups, 0.5 : printlevel := 0);
 print "MWSPrimes4:"; print MWSPrimes4;
+//[ 29, 37, 53, 61, 107, 109, 113, 163, 199, 271, 359, 379, 397, 523, 593, 631,
+//647, 877, 937, 1117, 1277, 1279, 1291, 1747, 2143, 2179, 2269, 2467, 2503, 2687,
+//2713, 2791, 3511, 3547, 3643, 3761, 4219, 4229, 4337, 5399, 5507, 6301, 7757, 8011, 8641 ]
 
 T := TorsionSubgroup(J);
 print "Torsion subgroup:"; print T;
