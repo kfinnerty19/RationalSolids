@@ -37,6 +37,42 @@ R.<x> = PolynomialRing(QQ)
 f =  x^6 - 9*x^2 + 9
 X = HyperellipticCurve(f)
 
+def omega_labels(f, p, n):
+    """Recover the (v2,v3) index of each element of Omega_p. Nothing hardcoded:
+    each w is an integer relation against log_p(2), log_p(3), found by lindep
+    and then verified against w."""
+    K = Qp(p, n)
+    a0, a2, a4, a6 = f[0], f[2], f[4], f[6]
+    E1 = EllipticCurve([0, a4, 0, a2*a6, a0*a6^2])
+    E2 = EllipticCurve([0, a2, 0, a0*a4, a0^2*a6])
+    bad = sorted(set(ZZ(E1.discriminant()).prime_factors()
+                   + ZZ(E2.discriminant()).prime_factors()
+                   + ZZ(a0).prime_factors() + ZZ(a6).prime_factors()))
+    logs = [log(K(q)) for q in bad]
+
+    labels = []
+    for w in Omega_set(f, p, n):
+        rel = [ZZ(r) for r in gp.lindep([w] + logs)]
+        assert rel[0] != 0, "lindep found no relation involving w = %s" % w
+        v = [-QQ(rel[i+1])/QQ(rel[0]) for i in range(len(logs))]
+        assert (w - sum(v[i]*logs[i] for i in range(len(logs)))).valuation() \
+               >= w.precision_absolute() - 5, "recovered label does not reproduce w"
+        assert max(c.denominator() for c in v) <= 12, \
+               "implausible denominators %s -- precision likely inadequate" % v
+        labels.append(tuple(v))
+    assert len(set(labels)) == len(labels), "Omega labels are not distinct"
+    return bad, labels
+
+ref = None
+for p in primes:
+    bad, lp = omega_labels(f, p, n)
+    if ref is None:
+        ref = lp
+    else:
+        assert lp == ref, "Omega ordering differs at p = %s; positional matching invalid" % p
+print("// labels are (v_%s) in order" % ", v_".join(str(q) for q in bad))
+print("omega_labels := %s;" % [[str(c) for c in lab] for lab in ref])
+
 for i in [0]:
     print(50 * "*")
     print("Curve # %s" % (i + 1))
@@ -60,10 +96,7 @@ for i in [0]:
         else:
             b = False
         
-        try:
-            rat_points, other_points = quadratic_chabauty_bielliptic(f, p, n, omega_info=True, up_to_auto=b)
-        except:
-            print("error", p)
+        rat_points, other_points = quadratic_chabauty_bielliptic(f, p, n, omega_info=True, up_to_auto=b)
         
         if b:
             for l in range(len(rat_points)):
@@ -90,26 +123,22 @@ for i in [0]:
             print("Not all rational points detected (or, more likely, point at infinity detected)")
             print("see below")
             print(rat_points_new)
-        try:
-            coeffs_rat = coefficients_mod_pN_v2(f, allpoints, im_div, base_pt, p, N, k=5)
-            coeffs_rat_int = [[ZZ(c[0]), ZZ(c[1])] for c in coeffs_rat]  # sanity check that MW coeffs of rat points are p-adically integral
-            for r in range(len(other_points)):
-                if other_points[r] == []:
-                    coeffs_fake_lists_c[primes.index(p)].append([])
-                else:
-                    try:
-                        coeffs_fake = coefficients_mod_pN_v2(f, other_points[r], im_div, base_pt, p, N, k=5)
-                    except:
-                        coeffs_fake = coefficients_mod_pN_v2(f,other_points[r][:len(other_points[r])-1],im_div,base_pt,p,N,k=5)
-                    if min([min([coeffs_fake[i][0].precision_absolute(), coeffs_fake[i][1].precision_absolute()]) for i in range(len(coeffs_fake))]) < N:
-                        coeffs_fake = coefficients_mod_pN_v2(f, other_points[r], im_div, base_pt, p, N, k=10)
-                    
-                    assert min([min([coeffs_fake[i][0].precision_absolute(), coeffs_fake[i][1].precision_absolute()]) for i in range(len(coeffs_fake))]) >= N, "Problem with precision of coefficients."
-                    
-                    coeffs_fake_int = [[ZZ(c[0]), ZZ(c[1])] for c in coeffs_fake if c[0].valuation(p) >= 0 and c[1].valuation(p) >= 0]
-                    coeffs_fake_lists_c[primes.index(p)].append(coeffs_fake_int)
-        except: 
-            print("problem",p)
+
+        coeffs_rat = coefficients_mod_pN_v2(f, allpoints, im_div, base_pt, p, N, k=5)
+        coeffs_rat_int = [[ZZ(c[0]), ZZ(c[1])] for c in coeffs_rat]  # sanity check that MW coeffs of rat points are p-adically integral
+        for r in range(len(other_points)):
+            if other_points[r] == []:
+                coeffs_fake_lists_c[primes.index(p)].append([])
+            else:
+                coeffs_fake = coefficients_mod_pN_v2(f, other_points[r], im_div, base_pt, p, N, k=5)
+                if min([min([coeffs_fake[i][0].precision_absolute(), coeffs_fake[i][1].precision_absolute()]) for i in range(len(coeffs_fake))]) < N:
+                    coeffs_fake = coefficients_mod_pN_v2(f, other_points[r], im_div, base_pt, p, N, k=10)
+                
+                assert min([min([coeffs_fake[i][0].precision_absolute(), coeffs_fake[i][1].precision_absolute()]) for i in range(len(coeffs_fake))]) >= N, "Problem with precision of coefficients."
+                
+                coeffs_fake_int = [[ZZ(c[0]), ZZ(c[1])] for c in coeffs_fake if c[0].valuation(p) >= 0 and c[1].valuation(p) >= 0]
+                coeffs_fake_lists_c[primes.index(p)].append(coeffs_fake_int)
+
     coeffs_fake_lists.append(coeffs_fake_lists_c)
     print("........")
     print(all(rat_pts_lists[j] == rat_pts_lists[0] for j in range(1, len(rat_pts_lists))))
