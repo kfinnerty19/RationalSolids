@@ -12,6 +12,6 @@ This code was built on Sage 10.5 and Magma V2.29-7. It was last updated in July 
 5. Follow the steps described in MainCode.m in this repository to replicate the analysis.
 
 # Description of Files
-- MainCode.m is the primary file of the repository and begins with instructions to replicate the analysis. It also contains all relevant files to run the sieve. Note that this must be run in multiple parts. Magma output is required for the quadratic Chabauty computations in Sage, and the Sage output is in turn required for the final sieving computation in Magma. 
+- MordellWeilSieve.m is the primary file of the repository and begins with instructions to replicate the analysis. It also contains all relevant files to run the sieve. Note that this must be run in multiple parts. Magma output is required for the quadratic Chabauty computations in Sage, and the Sage output is in turn required for the final sieving computation in Magma. 
 - SieveOutput.txt contains the printed output from the final step of MainCode.m so that one can inspect the output without running the full computation, if one wishes.
 - QuadraticChabautyAnalysis.sage contains three calls to the functionality of qc_g2_bielliptic.sage, running quadratic Chabauty for three different primes. In our particular example, the output for two quadratic Chabauty primes is sufficient, as discussed in the paper, but this is not the case for all bielliptic curves.
