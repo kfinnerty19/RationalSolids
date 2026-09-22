@@ -64,7 +64,7 @@ def omega_labels(f, p, n):
     return bad, labels
 
 ref = None
-for p in primes:
+for p in ordinary_pr[0]:
     bad, lp = omega_labels(f, p, n)
     if ref is None:
         ref = lp
