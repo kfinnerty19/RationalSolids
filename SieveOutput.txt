@@ -1,4 +1,4 @@
-Omega 1 out of 28
+Omega 1 of 28   (v2,v3) = (0, -2)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -6,7 +6,7 @@ mws_primes
 number of extra points: [ 4, 4, 28 ]
 number of cosets: 112
 after aux_int: 112
-after torsion: 336
+after torsion: 336 (expected 336 = 3 x 112)
   48 cosets eliminated at v = 29
         288 cosets remaining after v=29
   246 cosets eliminated at v = 61
@@ -22,7 +22,7 @@ after torsion: 336
         0 cosets remaining after v=3547
 necessary primes [ 29, 61, 1279, 3547 ]
 true [ 5, 11, 1 ]
-Omega 2 out of 28
+Omega 2 of 28   (v2,v3) = (0, -4/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -30,20 +30,20 @@ mws_primes
 number of extra points: [ 1, 4, 28 ]
 number of cosets: 28
 after aux_int: 28
-after torsion: 84
+after torsion: 84 (expected 84 = 3 x 28)
   12 cosets eliminated at v = 29
         72 cosets remaining after v=29
   72 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 3 out of 28
+Omega 3 of 28   (v2,v3) = (0, 0)
 easy
-Omega 4 out of 28
+Omega 4 of 28   (v2,v3) = (0, -10/3)
 easy
-Omega 5 out of 28
+Omega 5 of 28   (v2,v3) = (0, 2/3)
 easy
-Omega 6 out of 28
+Omega 6 of 28   (v2,v3) = (0, -2/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -51,7 +51,7 @@ mws_primes
 number of extra points: [ 1, 4, 28 ]
 number of cosets: 28
 after aux_int: 28
-after torsion: 84
+after torsion: 84 (expected 84 = 3 x 28)
   12 cosets eliminated at v = 29
         72 cosets remaining after v=29
   60 cosets eliminated at v = 61
@@ -66,7 +66,7 @@ after torsion: 84
         0 cosets remaining after v=3547
 necessary primes [ 29, 61, 3547 ]
 true [ 5, 11, 1 ]
-Omega 7 out of 28
+Omega 7 of 28   (v2,v3) = (0, -8/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -74,16 +74,16 @@ mws_primes
 number of extra points: [ 3, 16, 28 ]
 number of cosets: 84
 after aux_int: 84
-after torsion: 252
+after torsion: 252 (expected 252 = 3 x 84)
   36 cosets eliminated at v = 29
         216 cosets remaining after v=29
   216 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 8 out of 28
+Omega 8 of 28   (v2,v3) = (2/3, -2)
 easy
-Omega 9 out of 28
+Omega 9 of 28   (v2,v3) = (2/3, -4/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -91,14 +91,14 @@ mws_primes
 number of extra points: [ 2, 12, 16 ]
 number of cosets: 32
 after aux_int: 32
-after torsion: 96
+after torsion: 96 (expected 96 = 3 x 32)
   48 cosets eliminated at v = 29
         48 cosets remaining after v=29
   48 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 10 out of 28
+Omega 10 of 28   (v2,v3) = (2/3, 0)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -106,14 +106,14 @@ mws_primes
 number of extra points: [ 1, 8, 20 ]
 number of cosets: 20
 after aux_int: 20
-after torsion: 60
+after torsion: 60 (expected 60 = 3 x 20)
   24 cosets eliminated at v = 29
         36 cosets remaining after v=29
   36 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 11 out of 28
+Omega 11 of 28   (v2,v3) = (2/3, -10/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -121,14 +121,14 @@ mws_primes
 number of extra points: [ 1, 24, 20 ]
 number of cosets: 20
 after aux_int: 20
-after torsion: 60
+after torsion: 60 (expected 60 = 3 x 20)
   24 cosets eliminated at v = 29
         36 cosets remaining after v=29
   36 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 12 out of 28
+Omega 12 of 28   (v2,v3) = (2/3, 2/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -136,7 +136,7 @@ mws_primes
 number of extra points: [ 1, 4, 20 ]
 number of cosets: 20
 after aux_int: 20
-after torsion: 60
+after torsion: 60 (expected 60 = 3 x 20)
   24 cosets eliminated at v = 29
         36 cosets remaining after v=29
   12 cosets eliminated at v = 61
@@ -151,7 +151,7 @@ after torsion: 60
         0 cosets remaining after v=3547
 necessary primes [ 29, 61, 3547 ]
 true [ 5, 11, 1 ]
-Omega 13 out of 28
+Omega 13 of 28   (v2,v3) = (2/3, -2/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -159,7 +159,7 @@ mws_primes
 number of extra points: [ 3, 4, 20 ]
 number of cosets: 60
 after aux_int: 60
-after torsion: 180
+after torsion: 180 (expected 180 = 3 x 60)
   72 cosets eliminated at v = 29
         108 cosets remaining after v=29
   96 cosets eliminated at v = 61
@@ -174,9 +174,9 @@ after torsion: 180
         0 cosets remaining after v=3547
 necessary primes [ 29, 61, 3547 ]
 true [ 5, 11, 1 ]
-Omega 14 out of 28
+Omega 14 of 28   (v2,v3) = (2/3, -8/3)
 easy
-Omega 15 out of 28
+Omega 15 of 28   (v2,v3) = (-1/2, -2)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -184,14 +184,14 @@ mws_primes
 number of extra points: [ 3, 20, 12 ]
 number of cosets: 36
 after aux_int: 36
-after torsion: 108
+after torsion: 108 (expected 108 = 3 x 36)
   72 cosets eliminated at v = 29
         36 cosets remaining after v=29
   36 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 16 out of 28
+Omega 16 of 28   (v2,v3) = (-1/2, -4/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -199,12 +199,12 @@ mws_primes
 number of extra points: [ 2, 12, 8 ]
 number of cosets: 16
 after aux_int: 16
-after torsion: 48
+after torsion: 48 (expected 48 = 3 x 16)
   48 cosets eliminated at v = 29
         0 cosets remaining after v=29
 necessary primes [ 29 ]
 true [ 5, 11, 1 ]
-Omega 17 out of 28
+Omega 17 of 28   (v2,v3) = (-1/2, 0)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -212,14 +212,14 @@ mws_primes
 number of extra points: [ 1, 4, 12 ]
 number of cosets: 12
 after aux_int: 12
-after torsion: 36
+after torsion: 36 (expected 36 = 3 x 12)
   24 cosets eliminated at v = 29
         12 cosets remaining after v=29
   12 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 18 out of 28
+Omega 18 of 28   (v2,v3) = (-1/2, -10/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -227,16 +227,16 @@ mws_primes
 number of extra points: [ 1, 24, 12 ]
 number of cosets: 12
 after aux_int: 12
-after torsion: 36
+after torsion: 36 (expected 36 = 3 x 12)
   24 cosets eliminated at v = 29
         12 cosets remaining after v=29
   12 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 19 out of 28
+Omega 19 of 28   (v2,v3) = (-1/2, 2/3)
 easy
-Omega 20 out of 28
+Omega 20 of 28   (v2,v3) = (-1/2, -2/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -244,16 +244,16 @@ mws_primes
 number of extra points: [ 2, 12, 12 ]
 number of cosets: 24
 after aux_int: 24
-after torsion: 72
+after torsion: 72 (expected 72 = 3 x 24)
   48 cosets eliminated at v = 29
         24 cosets remaining after v=29
   24 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 21 out of 28
+Omega 21 of 28   (v2,v3) = (-1/2, -8/3)
 easy
-Omega 22 out of 28
+Omega 22 of 28   (v2,v3) = (1/6, -2)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -261,16 +261,16 @@ mws_primes
 number of extra points: [ 1, 24, 24 ]
 number of cosets: 24
 after aux_int: 24
-after torsion: 72
+after torsion: 72 (expected 72 = 3 x 24)
   48 cosets eliminated at v = 29
         24 cosets remaining after v=29
   24 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 23 out of 28
+Omega 23 of 28   (v2,v3) = (1/6, -4/3)
 easy
-Omega 24 out of 28
+Omega 24 of 28   (v2,v3) = (1/6, 0)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -278,14 +278,14 @@ mws_primes
 number of extra points: [ 3, 20, 24 ]
 number of cosets: 72
 after aux_int: 72
-after torsion: 216
+after torsion: 216 (expected 216 = 3 x 72)
   144 cosets eliminated at v = 29
         72 cosets remaining after v=29
   72 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 25 out of 28
+Omega 25 of 28   (v2,v3) = (1/6, -10/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -293,14 +293,14 @@ mws_primes
 number of extra points: [ 3, 4, 24 ]
 number of cosets: 72
 after aux_int: 72
-after torsion: 216
+after torsion: 216 (expected 216 = 3 x 72)
   144 cosets eliminated at v = 29
         72 cosets remaining after v=29
   72 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 26 out of 28
+Omega 26 of 28   (v2,v3) = (1/6, 2/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -308,14 +308,14 @@ mws_primes
 number of extra points: [ 1, 4, 24 ]
 number of cosets: 24
 after aux_int: 24
-after torsion: 72
+after torsion: 72 (expected 72 = 3 x 24)
   48 cosets eliminated at v = 29
         24 cosets remaining after v=29
   24 cosets eliminated at v = 61
         0 cosets remaining after v=61
 necessary primes [ 29, 61 ]
 true [ 5, 11, 1 ]
-Omega 27 out of 28
+Omega 27 of 28   (v2,v3) = (1/6, -2/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -323,7 +323,7 @@ mws_primes
 number of extra points: [ 3, 20, 24 ]
 number of cosets: 72
 after aux_int: 72
-after torsion: 216
+after torsion: 216 (expected 216 = 3 x 72)
   144 cosets eliminated at v = 29
         72 cosets remaining after v=29
   48 cosets eliminated at v = 61
@@ -351,7 +351,7 @@ mws_primes
         0 cosets remaining after v=7
 necessary primes [ 29, 61, 3547, 5, 7 ]
 true [ 5, 11, 3 ]
-Omega 28 out of 28
+Omega 28 of 28   (v2,v3) = (1/6, -8/3)
 [ 5, 11 ]
 aux_int = 1
 mws_primes
@@ -359,7 +359,7 @@ mws_primes
 number of extra points: [ 1, 4, 24 ]
 number of cosets: 24
 after aux_int: 24
-after torsion: 72
+after torsion: 72 (expected 72 = 3 x 24)
   48 cosets eliminated at v = 29
         24 cosets remaining after v=29
   24 cosets eliminated at v = 61

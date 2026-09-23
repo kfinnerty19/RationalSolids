@@ -1,7 +1,7 @@
 # Rational Solids with Equal Surface Area and Volume
 This repository contains computations to accompany the paper "Rational Pyramids and Prisms with Equal Surface Area and Volume" by [Kate Finnerty](https://katefinnertymath.com) and [Jacob Mayle](https://jacobmayle.com). 
 
-This code was built on Sage 10.5 and Magma V2.29-7. It was last updated in July 2026. If you have questions or suggestions, please contact Kate Finnerty at finnerty(at)math(dot)harvard(dot)edu.
+This code was built on Sage 10.9 and Magma V2.29-7. It was last updated in September 2026. If you have questions or suggestions, please contact Kate Finnerty at finnerty(at)math(dot)harvard(dot)edu.
 
 # Installation Instructions
 
